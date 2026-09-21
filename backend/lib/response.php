@@ -19,3 +19,10 @@ function jsonError(string $error, string $message, int $status = 400): void
     ], JSON_UNESCAPED_UNICODE);
     exit;
 }
+
+function check(?string $error, string $code, int $status = 400): void
+{
+    if ($error !== null) {
+        jsonError($code, $error, $status);
+    }
+}

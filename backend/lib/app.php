@@ -5,6 +5,8 @@ require_once __DIR__ . '/../config/db.php';
 require_once __DIR__ . '/response.php';
 require_once __DIR__ . '/jwt.php';
 require_once __DIR__ . '/activityLog.php';
+require_once __DIR__ . '/sanitize.php';
+require_once __DIR__ . '/validation.php';
 
 // Cargar variables de entorno
 loadEnv(__DIR__ . '/../../.env');
