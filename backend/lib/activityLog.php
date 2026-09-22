@@ -1,9 +1,21 @@
 <?php
 
+function getClientIp(): ?string
+{
+    if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+        $ips = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        return trim($ips[0]);
+    }
+    if (!empty($_SERVER['HTTP_X_REAL_IP'])) {
+        return $_SERVER['HTTP_X_REAL_IP'];
+    }
+    return $_SERVER['REMOTE_ADDR'] ?? null;
+}
+
 function logActivity(?int $userId, string $action, array $detail = []): void
 {
     try {
-        $ip = $_SERVER['REMOTE_ADDR'] ?? null;
+        $ip = getClientIp();
         $userAgent = $_SERVER['HTTP_USER_AGENT'] ?? null;
 
         $stmt = db()->prepare(
