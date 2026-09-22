@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Columna Izquierda -->
+  <rect class="icon-anim dash-top-left" x="4" y="4" width="6" height="5" rx="1.5" />
+  <rect class="icon-anim dash-bottom-left" x="4" y="11" width="6" height="9" rx="1.5" />
+  
+  <!-- Columna Derecha -->
+  <rect class="icon-anim dash-top-right" x="14" y="4" width="6" height="9" rx="1.5" />
+  <rect class="icon-anim dash-bottom-right" x="14" y="15" width="6" height="5" rx="1.5" />
+</svg>
