@@ -8,5 +8,6 @@ export const STORAGE_KEYS = {
   token: "mt_token",
   user: "mt_user",
   theme: "mt_theme",
+  accent: "mt_accent",
   remember: "mt_remember",
 };

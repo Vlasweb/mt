@@ -74,7 +74,7 @@ export function removeUser() {
 }
 
 // ------------------------------------------------------------
-// Tema
+// Tema y acento
 // ------------------------------------------------------------
 
 export function saveTheme(theme) {
@@ -83,6 +83,14 @@ export function saveTheme(theme) {
 
 export function getTheme() {
   return getItem(localStorage, STORAGE_KEYS.theme);
+}
+
+export function saveAccent(accent) {
+  setItem(localStorage, STORAGE_KEYS.accent, accent);
+}
+
+export function getAccent() {
+  return getItem(localStorage, STORAGE_KEYS.accent);
 }
 
 // ------------------------------------------------------------
